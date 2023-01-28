@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "lena-library": ["src"],
+      "lena-library/*": ["src/*", "*"]
+    }
+  },
+  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"],
+  "paths": {
+    "@testt": ["./packages/Button"]
+  }
+}
