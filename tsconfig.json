@@ -4,6 +4,7 @@
     "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "declarationDir": "lib",
     "jsx": "react",
     "baseUrl": "./",
     "paths": {
@@ -13,7 +14,5 @@
     }
   },
   "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"],
-  "paths": {
-    "@testt": ["./packages/Button"]
-  }
+ 
 }

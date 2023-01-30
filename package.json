@@ -4,10 +4,11 @@
   "private": true,
   "description": "",
   "license": "MIT",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
   "files": [
-    "dist"
+    "lib"
   ],
   "workspaces": [
     "packages/*"
@@ -16,9 +17,11 @@
     "_build:site_": "构建文档站点 后续会部署到 github pages",
     "_dev_": "启动开发环境 在文档站点中调试组件",
     "_preview:site_": "本地预览构建后的文档站点",
-    "build": "father build",
+    "build": "npm run clean && npm run build:types && gulp",
     "build:site": "rimraf doc-site && dumi build",
-    "build:watch": "father dev",
+    "build:types": "tsc -p tsconfig.build.json && cpr lib esm",
+    "build:watch": "father build",
+    "clean": "rimraf lib esm dist",
     "deploy:site": "npm run build:site && gh-pages -d doc-site",
     "dev": "dumi dev",
     "docs:build": "dumi build",
@@ -54,8 +57,18 @@
     ]
   },
   "dependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@babel/runtime": "^7.20.13",
+    "cpr": "^3.0.1",
     "cross-env": "^7.0.3",
     "gh-pages": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "lerna": "^6.4.1",
     "serve": "^14.2.0"
   },

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklena_library=self.webpackChunklena_library||[]).push([[9],{12535:function(f,n,e){e.r(n),e.d(n,{default:function(){return u}});var a=e(4982),t=e(67294),o=function(){var d=(0,a.UO)(),m=d.id,s=(0,a.WF)(),l=s.demos,c=l[m]||{},r=c.component;return r&&(0,t.createElement)(r)},u=o}}]);
