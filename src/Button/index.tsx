@@ -1,10 +1,9 @@
 import React, { useState, type FC } from 'react';
-
 const Button: FC<{ title: string }> = (props) => {
   const [number, setnumber] = useState(0);
   return (
     <div>
-      <h1>{props.title}</h1>
+      <h1 className="button-log">{props.title}</h1>
       <h4
         onClick={() => {
           setnumber((number) => number + 1);

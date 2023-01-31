@@ -10,7 +10,7 @@ order: 1
 
 ```jsx
 import { Button } from 'lena-library';
-
+import './style';
 export default () => <Button />;
 ```
 

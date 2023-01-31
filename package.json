@@ -6,7 +6,6 @@
   "license": "MIT",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
-  "typings": "lib/index.d.ts",
   "files": [
     "lib"
   ],
@@ -32,6 +31,7 @@
     "prepare": "husky install && dumi setup",
     "prepublishOnly": "father doctor && npm run build",
     "preview:site": "cross-env SITE_BUILD_ENV=PREVIEW npm run build:site && serve doc-site",
+    "release": "ts-node ./scripts/release.ts",
     "start": "npm run dev"
   },
   "commitlint": {
@@ -68,9 +68,13 @@
     "cross-env": "^7.0.3",
     "gh-pages": "^5.0.0",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-less": "^5.0.0",
     "lerna": "^6.4.1",
-    "serve": "^14.2.0"
+    "serve": "^14.2.0",
+    "through2": "^4.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "strict": true,
+    "strict": false,
     "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -13,6 +13,6 @@
       "lena-library/*": ["src/*", "*"]
     }
   },
-  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"],
+  "include": ["src", "typings.d.ts"],
  
 }
